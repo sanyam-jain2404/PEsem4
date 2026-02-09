@@ -1,12 +1,18 @@
 
 import './App.css'
-
+import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
+import Registration from './components/Registration.jsx'
 function App() {
   
   return (
    <div>
-   <h1>Hello World</h1>
-   <h2>Welcome to React</h2>
+    <Header title="My React App"/>
+    
+
+
+   <Registration/>
+   <Footer/>
    </div>
   )
 }

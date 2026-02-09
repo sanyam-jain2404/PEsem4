@@ -1,0 +1,6 @@
+.Nav{
+    background: #000;
+    display: flex; /* or display: grid; */
+    padding: 12px;
+    gap: 20px;
+}
