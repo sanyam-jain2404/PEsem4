@@ -7,9 +7,9 @@ function App() {
 
   return (
     <>
-      <Search/>
+      {/* <Search/> */}
       {/* <EventTodo/> */}
-      {/* <Counter/> */}
+      <Counter/>
     </>
   )
 }
