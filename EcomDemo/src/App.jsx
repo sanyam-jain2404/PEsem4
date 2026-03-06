@@ -21,7 +21,7 @@ function App() {
       Image:"https://m.media-amazon.com/images/I/518rbuIeNAL._SX522_.jpg"
     },
   ]
-  
+  const [filteredProducts, setFilteredProducts] = useState(product);
   function addToCart(product){
     setCart([...cart,product])
     setAmt(totalAmt+product.price);
@@ -34,7 +34,7 @@ function App() {
   const totalAmount=cart.reduce((total,index)=>(total+index.price),0);
   return (
     <div>
-      <Search/>
+      <Search products={product} setFilteredProducts={setFilteredProducts} />
       <Header cart={cart.length}/>
       <ProductList products={product} addToCart={addToCart}/>
       <Cart totalAmt={totalAmt} cart={cart} removeFromCart={removeFromCart}/>
