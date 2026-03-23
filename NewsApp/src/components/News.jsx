@@ -1,11 +1,11 @@
 import { useState,useEffect } from 'react'
+import axios from 'axios';
 export default function News() {
     const [news, setNews] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     function fetchdata(){
-        fetch("https://newsapi.org/v2/everything?q=tesla&from=2026-02-23&sortBy=publishedAt&apiKey=b92bfdbe16bc41d6a55132b7ca692bcd")
-        .then(res=>res.json())
+        axios.get("https://newsapi.org/v2/everything?q=tesla&from=2026-02-23&sortBy=publishedAt&apiKey=b92bfdbe16bc41d6a55132b7ca692bcd")
         .then(data=>
             {setNews(data.articles);
             setLoading(false);}
