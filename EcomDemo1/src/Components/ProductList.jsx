@@ -1,5 +1,5 @@
 import ProductCart from './ProductCart';
-export default function ProductList({products,addToCart, setSelectedProduct})
+export default function ProductList({products,addToCart})
 {
     return(
         <div className='product-grid'>
@@ -7,8 +7,8 @@ export default function ProductList({products,addToCart, setSelectedProduct})
         <ProductCart 
          key={product.id} 
         product={product} 
-        addToCart={addToCart}
-        setSelectedProduct={setSelectedProduct} />
+        addToCart={addToCart} />
+
         )}
         
 
